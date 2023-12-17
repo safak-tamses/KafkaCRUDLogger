@@ -1,0 +1,32 @@
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092
+
+
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: crud
+      username: root
+      password: example
+      authentication-database: admin
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5433/crud
+    username: root
+    password: example
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+kafka:
+  topic:
+    create: dbCreate
+    read: dbRead
+    update: dbUpdate
+    delete: dbDelete
+  groupId: groupId
